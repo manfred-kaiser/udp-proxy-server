@@ -24,5 +24,13 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Topic :: System :: Networking"
+    ],
+    entry_points={
+        'console_scripts': [
+            "udp2tcp = udp_proxy_server.cli:udp2tcp"
+        ]
+    },
+    install_requires=[
+        'enhancements'
     ]
 )
