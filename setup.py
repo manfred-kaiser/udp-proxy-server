@@ -11,7 +11,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='udp_proxy_server',
-    version='0.0.1',
+    version='0.0.2',
     author='Manfred Kaiser',
     author_email='manfred.kaiser@logfile.at',
     description='udp proxy server to intercept udp',
@@ -24,5 +24,13 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Topic :: System :: Networking"
+    ],
+    entry_points={
+        'console_scripts': [
+            "udp2tcp = udp_proxy_server.cli:udp2tcp"
+        ]
+    },
+    install_requires=[
+        'enhancements'
     ]
 )
